@@ -1,6 +1,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:ncb_clone/Components/drawer/nav_drawer.dart';
 
 class AccountHome extends StatefulWidget {
   const AccountHome({Key? key}) : super(key: key);
@@ -23,14 +24,14 @@ class _AccountHomeState extends State<AccountHome> {
           backgroundColor: Color.fromRGBO(0, 0, 0, 0),
           elevation: 0,
           title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.menu,
-                    size: 35,
-                  )),
+              // IconButton(
+              //     onPressed: () {},
+              //     icon: Icon(
+              //       Icons.menu,
+              //       size: 35,
+              //     )),
               TextButton(
                 onPressed: () {},
                 child: Text(
@@ -45,6 +46,7 @@ class _AccountHomeState extends State<AccountHome> {
             ],
           ),
         ),
+        drawer: NavDrawer(),
         body: Stack(
           children: [
             ClipRRect(
