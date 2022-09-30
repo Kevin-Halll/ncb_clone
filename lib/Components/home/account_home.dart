@@ -256,18 +256,20 @@ class _AccountHomeState extends State<AccountHome> {
                                       ),
                                       foregroundColor: MaterialStateProperty.all(Colors.black),
                                       shape: MaterialStateProperty.all(
-                                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))
+                                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
                                       )
                                     ),
                                     child: Row(
                                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text('New Debit Card?'),
+                                        Text('New Debit Card?', style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),),
                                         Row(
                                           children: [
                                             Text('Activate Here'),
                                             SizedBox(width: 5,),
-                                            Icon(Icons.arrow_forward_ios)
+                                            Icon(Icons.arrow_forward_ios_outlined)
                                           ],
                                         )
                                       ],
@@ -277,7 +279,8 @@ class _AccountHomeState extends State<AccountHome> {
                                     margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
                                     padding: EdgeInsets.all(15),
                                     decoration: BoxDecoration(
-                                      color: Colors.white
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(10)
                                     ),
                                     child: Column(
                                       children: [
@@ -295,6 +298,32 @@ class _AccountHomeState extends State<AccountHome> {
                                               fontSize: 14
                                             ),)
                                           ]
+                                        ),
+                                        SizedBox(height: 10,),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text("***7666", style: TextStyle(color: Color(0xFF041657)),),
+                                            Text("JMD 37,114.92", style: TextStyle(
+                                              color: Color(0xFF041657),
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500
+                                            ),)
+                                          ],
+                                        ),
+                                        Divider(height: 15, thickness: 1),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.end,
+                                          children: [
+                                            Text("ACCOUNT DETAILS", style: TextStyle(
+                                              color: Colors.blue,
+                                              fontSize: 12,
+                                              fontWeight: FontWeight.bold
+                                            ),
+                                            ),
+                                            SizedBox(width: 10,),
+                                            Icon(Icons.arrow_forward, color: Colors.blue, size: 20,)
+                                          ],
                                         )
                                       ]
                                     ),
